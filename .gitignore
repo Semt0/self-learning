@@ -62,6 +62,7 @@ datasets/
 
 # ===== clone 的参考仓库（不提交）=====
 cs294-158-sp24/hw/deepul/
+cs285-sp26/hw/homework_spring2026/
 
 # ===== IDE =====
 .vscode/
