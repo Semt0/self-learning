@@ -85,3 +85,7 @@ logs/
 *.tmp
 *.bak
 .cache/
+
+# ===== 站点构建 =====
+site/node_modules/
+site/dist/
