@@ -333,6 +333,9 @@ async function main() {
     const num = (s) => { const m = s.match(/(?:lec|l|ch)-?(\d+)/i); return m ? Number(m[1]) : Infinity; };
     course.notes.sort((a, b) => num(a.slug) - num(b.slug) || a.slug.localeCompare(b.slug));
 
+    // 先建好课程输出目录（即使 0 篇笔记也要建，课程索引页要用）
+    await fs.mkdir(path.join(DIST, course.dir), { recursive: true });
+
     for (const note of course.notes) {
       const resolveNoteLink = (target) => {
         const hit = noteIndex.get(norm(target));
@@ -366,8 +369,6 @@ async function main() {
         headings: ctx.toc.map((t) => t.text).slice(0, 12),
         text: '', // 下面统一提取
       });
-
-      await fs.mkdir(path.join(DIST, course.dir), { recursive: true });
     }
     // 拷贝课程资源
     await copyDir(path.join(ROOT, course.dir, 'assets'), path.join(DIST, course.dir, 'assets'));
@@ -408,12 +409,13 @@ async function main() {
   };
 
   for (const course of courses) {
-    course.notes.forEach((note, i) => {
+    for (let i = 0; i < course.notes.length; i++) {
+      const note = course.notes[i];
       const prev = course.notes[i - 1] || null;
       const next = course.notes[i + 1] || null;
       const page = renderNotePage({ site, course, note, prev, next });
-      fs.writeFile(path.join(DIST, course.dir, `${note.slug}.html`), page);
-    });
+      await fs.writeFile(path.join(DIST, course.dir, `${note.slug}.html`), page);
+    }
 
     // 课程索引页：渲染 README + 笔记列表
     let readmeHtml = '';
