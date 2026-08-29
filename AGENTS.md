@@ -7,6 +7,24 @@
 - 多门课程混合存放，每门课程一个独立目录。
 - 多语言混合：不同课程的作业可能使用 C / Python / Java 等，按课程要求而定。
 - 笔记统一使用 Markdown。
+- 笔记使用 Obsidian 格式，便于在 Obsidian 中渲染和关联。
+
+## 笔记格式（Obsidian）
+
+- 使用标准 YAML frontmatter，包含 `title`、`course`、`lecture`、`topic`、`date`、`tags`、`status` 等字段。
+- 文件顶部或正文可使用 Obsidian 标签：`#tag`。
+- 讲次之间用 `[[lec-NN-topic|显示名]]` 建立 wikilink，方便图谱导航。
+- 数学公式使用 Obsidian 默认语法：
+  - 行内公式：`$...$`
+  - 块级公式：`$$...$$`
+  - 不使用 `\(...\)` / `\[...\]`，避免渲染失败。
+- 提示 / 警告 / 问题 / 摘要使用 Obsidian callout：
+  - `> [!abstract]`：一句话概括
+  - `> [!info]`：补充信息
+  - `> [!warning]`：待补充或注意点
+  - `> [!question]`：思考题或疑问
+- 代码块使用 fenced code block（```）。
+- 图片等附件放在课程目录下的 `assets/` 中，笔记中用标准 Markdown 图片语法引用。
 
 ## 目录约定
 

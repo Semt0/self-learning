@@ -39,15 +39,18 @@ Berkeley 的深度强化学习课程，覆盖模仿学习、策略梯度、Actor
 
 ### 作业
 
-- [ ] HW1: Imitation Learning — `hw/homework_spring2026/hw1/`
-- [ ] HW2: Policy Gradients — `hw/homework_spring2026/hw2/`
-- [ ] HW3: Q-Learning and Actor Critic — `hw/homework_spring2026/hw3/`
-- [ ] HW4: LLM RL — `hw/homework_spring2026/hw4/`
-- [ ] HW5: Offline RL — `hw/homework_spring2026/hw5/`
+- [ ] HW1: Imitation Learning — `hw/homework_spring2026/hw1/` ([作业文档](hw/homework_spring2026/hw1/hw1.pdf))
+- [ ] HW2: Policy Gradients — `hw/homework_spring2026/hw2/` ([作业文档](hw/homework_spring2026/hw2/hw2.pdf))
+- [ ] HW3: Q-Learning and Actor Critic — `hw/homework_spring2026/hw3/` ([作业文档](hw/homework_spring2026/hw3/hw3.pdf))
+- [ ] HW4: LLM RL — `hw/homework_spring2026/hw4/` ([作业文档](hw/homework_spring2026/hw4/hw4.pdf))
+- [ ] HW5: Offline RL — `hw/homework_spring2026/hw5/` ([作业文档](hw/homework_spring2026/hw5/hw5.pdf))
 
 ### 期末项目
 
 - [ ] 默认项目：Offline-to-Online RL 或 LLM RL
+  - [默认项目说明](hw/homework_spring2026/final_project_docs/final_project_outline.pdf)
+  - [Offline-to-Online RL 默认项目](hw/homework_spring2026/final_project_docs/offline_to_online_rl_default_final_project.pdf)
+  - [LLM RL 默认项目](hw/homework_spring2026/final_project_docs/llm_rl_default_final_project.pdf)
 - [ ] Proposal / Outline / Milestone / Report
 
 ### 讲义进度
