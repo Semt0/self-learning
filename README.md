@@ -67,3 +67,7 @@ self-learning/
 - [MIT 6.S184 IAP26](./mit-6.s184-iap26/) — Introduction to Flow Matching and Diffusion Models（已完成）
 - [CS285-SP26](./cs285-sp26/) — Berkeley Deep Reinforcement Learning (Sergey Levine)
 - [CS294-158-SP24](./cs294-158-sp24/) — Berkeley Deep Unsupervised Learning (生成模型 + 自监督学习)
+
+## 待学习计划
+
+- [ ] [MIT 6.824](./mit-6.824/) — Distributed Systems（分布式系统）
